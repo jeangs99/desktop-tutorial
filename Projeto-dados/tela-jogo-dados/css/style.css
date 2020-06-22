@@ -1,0 +1,29 @@
+body {
+  background-color: #c6c6c6;
+}
+
+.container {
+  background-color: #ffffff;
+  border: 2px solid;
+  border-radius: 15px 5px 0px 35px;
+  height: 330px;
+  margin-top: 200px;
+  width: 400px;
+  padding: 10px;
+}
+
+nav {
+  border-radius: 20px;
+}
+
+.nav-link {
+  border-radius: 50px;
+}
+
+#reset {
+  padding: 15px;
+}
+
+/*
+div.container > nav.
+*/
