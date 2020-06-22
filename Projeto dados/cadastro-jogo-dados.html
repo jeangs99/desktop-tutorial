@@ -21,16 +21,8 @@
 			<input type="number" name="tIdade" id="cIdade" required><br>
 			<button id="btnEnviar" onclick="cadastraJogador()">Cadastrar</button>
 			<p id="funciona"></p>
-			<p><a href="jogo-dados.html">Ir para o o jogo</a></p>
-			<script>
-				function cadastraJogador(){
-					var nome = String(document.getElementById('cNome').value);
-					var nick = String(document.getElementById('cNick').value);
-					var idade = Number(document.getElementById('cIdade').value);
-					/*Abaixo um código para testar se o conteúdo digitado pelo usuário foi gravado nas variáveis.*/
-					document.getElementById('funciona').innerHTML = `Seu nome é <strong>${nome}</strong>, e seu nick é <strong>${nick}</strong>  e sua idade é <strong>${idade}</strong>`;
-				}
-			</script>
+			<p><a href="/home/jean/Documentos/GitHub/desktop-tutorial/Projeto dados/tela-jogo-dados/index.html">Ir para o o jogo</a></p>
+			<script src="jogo-dados.js" type="text/javascript"></script>
 		</fieldset>
 		
 		
