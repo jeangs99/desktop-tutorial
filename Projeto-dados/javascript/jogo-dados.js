@@ -1,9 +1,8 @@
-function(btnEnvia){
-	var nome;
-	var nick;
+function(cadastraJogador()){
+	var nome = document.getElementById('cNome').value;
+	var nick ;
 	var idade;
-	/*document.querySelector('#btnEnvia').addEventListener('click', () => {
-		window.location.href = 'jogo-dados.html';	
-	});*/
-	alert('Funcionando');
+
+	alert('Seu nome é: ' + nome);
 }
+
