@@ -5,28 +5,80 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/jogo-dados.css">
 	<!-- <script type="text/javascript" src="javascript/jogo-dados.js"></script> -->
+	    <script type="text/javascript">
+        //inserir as funções aqui, uma abaixo da outra
+        function cadastraJogador()
+        {
+           localStorage.setItem(cNick.value, cIdade.value);
+           
+           alert("Item adicionado.");
+
+        }
+
+        /*function ler()
+        {
+            var obj = localStorage.getItem(txtChave.value);
+            if(obj != null)
+                alert(obj)
+            else
+            alert("O item procurado não existe.")
+        }
+        function remover()
+        {
+            localStorage.removeItem(txtChave.value);
+            alert("Item removido.");
+        }*/
+
+        function limpar()
+        {
+            localStorage.clear();
+            
+            localStorage.removeItem(cNome.value, cNick.value, cIdade.value);
+            alert("Item removido.");
+        }
+
+        if(typeof(Storage)!=="undefined")
+        {
+            //o browser suporta HTML 5 Web Storage
+        }
+        else
+        {
+            //o browser não suporta HTML 5 Web Storage
+        }
+
+
+		/*Read more: http://www.linhadecodigo.com.br/artigo/3537/trabalhando-com-html5-web-storage.aspx#ixzz6QC2Cp6Hd
+
+		Read more: http://www.linhadecodigo.com.br/artigo/3537/trabalhando-com-html5-web-storage.aspx#ixzz6QC1zG6mj
+
+
+		Read more: http://www.linhadecodigo.com.br/artigo/3537/trabalhando-com-html5-web-storage.aspx#ixzz6QC1iq4pa*/
+    </script>
 </head>
 <body>
 	<div id="sessaoFormulario">
-	<form id="formularioId" action="tela-jogo-dados/index.html" method="GET">
+	<!-- <form id="formularioId" action="tela-jogo-dados/index.html" method="GET"> -->
 
 		<fieldset>
 
 			<legend>Insira seus dados abaixo</legend>
 			<label for="cNome">Nome:</label>
-			<input type="text" name="tNome" id="cNome" required><br>
+			<input type="text" name="tNome" id="cNome" required/><br>
 			<label for="cNick">Nick:</label>
-			<input type="text" name="tNick" id="cNick" required><br>
+			<input type="text" name="tNick" id="cNick" required/><br>
 			<label for="tIdade">Idade:</label>
-			<input type="number" name="tIdade" id="cIdade" required><br>
+			<input type="number" name="tIdade" id="cIdade" required/><br>
+
 			<button id="btnEnviar" onclick="cadastraJogador()">Cadastrar</button>
+            <button id="btnEnviar" onclick="limpar()">limpar</button>
+
 			<p id="funciona"></p>
-			<p><a href="/tela-jogo-dados/index.html">Ir para o o jogo</a></p>
-			<script src="javascript/jogo-dados.js" type="text/javascript"></script>
+			<p><a href="jogo-dados.html">Ir para o o jogo</a></p>
+			<!-- <script src="javascript/jogo-dados.js" type="text/javascript"></script> -->
 		</fieldset>
 		
 		
-	</form>
+	<!-- </form> -->
 	
 	</div>
 </body>

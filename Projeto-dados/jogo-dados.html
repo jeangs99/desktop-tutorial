@@ -2,17 +2,34 @@
 <html>
 <head>
 	<title>Jogo dos dados</title>
-	<link rel="stylesheet" type="text/css" href="css/arquivo-css.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/arquivo-css.css"> -->
 </head>
 <body>
 	
-	Aqui montaremos um bloco para inserir as imagens dos dados.
+	<p>Aqui montaremos um bloco para inserir as imagens dos dados.</p>
 
-	Bem-vindo, jogador ""!
+	<p>Bem-vindo, jogador ""!</p>
 
-	Iniciaremos o jogo agora mesmo. Clique no botão "".
-		
-	</form>
-	</div>
+	<p>Iniciaremos o jogo agora mesmo. Clique no botão "".</p>
+
+	
+	<label for="cNick">Nick:</label>
+	<input type="text" name="tNick" id="cNick" required/><br>
+	<label for="tIdade">Idade:</label>
+	<input type="number" name="tIdade" id="cIdade" required/><br>
+
+	 <button id="btnLer" onclick="ler()">Ler valor</button>
+	 <script type="text/javascript">
+
+        function ler()
+	 	 {
+            var obj = localStorage.getItem(cNick.value);
+            if(obj != null)
+                /*alert(obj)*/
+            	document.getElementById('cIdade').value = obj;
+            else
+            alert("O item procurado não existe.");
+        }
+	 </script>
 </body>
 </html>
